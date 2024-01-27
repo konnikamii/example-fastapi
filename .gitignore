@@ -1,0 +1,6 @@
+__pycache__
+venv/
+.pytest_cache
+1api.env
+1apiLocal.env
+1db.env
