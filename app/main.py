@@ -1,17 +1,16 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-#from app.routers.vote import vote
-#from . import models
-#from .database import engine
+# from app.routers.vote import vote
+# from . import models
+# from .database import engine
 from .routers import post, user, auth, vote
 
 
+# generate database but no need with alembic
+# models.Base.metadata.create_all(bind=engine)
 
-##generate database but no need with alembic
-#models.Base.metadata.create_all(bind=engine)
-
-app= FastAPI()
+app = FastAPI()
 
 origins = ["*"]
 
@@ -28,11 +27,7 @@ app.include_router(user.router)
 app.include_router(auth.router)
 app.include_router(vote.router)
 
+
 @app.get("/")
 def root():
-  return {"message":"Hyyyy therere"}
-
-
-
-
-
+    return {"message": "Hyyyy therere"}

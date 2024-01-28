@@ -1,9 +1,10 @@
-from pydantic import ConfigDict, Field, BaseConfig
-from pydantic_settings import BaseSettings, SettingsConfigDict
+from logging import config
+from pydantic_settings import BaseSettings
+from pydantic.dataclasses import dataclasses
+from pydantic import ConfigDict, BaseModel
 
-from typing import Annotated, TypeVar
 
-
+# @dataclasses(config=ConfigDict(env_file="1apiLocal.env"))
 class Settings(BaseSettings):
     database_hostname: str
     database_port: str
