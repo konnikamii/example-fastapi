@@ -61,4 +61,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/fastapi:latest
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/fastapi:latest
