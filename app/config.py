@@ -1,7 +1,4 @@
-from logging import config
 from pydantic_settings import BaseSettings
-from pydantic.dataclasses import dataclasses
-from pydantic import ConfigDict, BaseModel
 
 
 # @dataclasses(config=ConfigDict(env_file="1apiLocal.env"))
@@ -15,7 +12,7 @@ class Settings(BaseSettings):
     algorithm: str
     access_token_expire_minutes: int
     model_config = {
-        'env_file': "1apiLocal.env"
+        'env_file': ".env"
     }
 
 
